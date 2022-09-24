@@ -1,0 +1,135 @@
+@font-face{
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-family: 'OpenSans';
+    font-weight: normal;
+}
+@font-face{
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+@font-face{
+    src:url('../fonts/Ubuntu-Regular.ttf');
+    font-family: 'Ubuntu';
+    font-weight: normal;
+}
+
+*,html, body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    cursor: pointer;
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+}
+ul li{
+    list-style-type: none;
+}
+
+#bodycontainer {
+    /**margin: 0;**/
+    display: grid;
+    grid-template-columns: 0.6fr 9.4fr;
+    height: 100vh;
+    /**width: 100%;**/
+}
+
+#bodycontainer .sidenavigator {
+    background-color: #27ae60;
+    color: #000000;
+    height: 100%;
+}
+
+#bodycontainer .sidenavigator li{
+    padding-bottom: 0.8em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    padding-top:0.5em;
+    cursor: pointer;
+}
+#bodycontainer .sidenavigator li:hover{
+    background-color: #dbdbdb;
+    transition: 0.5s ease-in;
+}
+
+#bodycontainer .sidenavigator li.active{
+    background-color: #16a085;
+}
+
+
+/*---- MAIN CONTENTS STYLING AND MAP AREA STYLING -----*/
+.maincontents {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#Div1, #Div2,#Div3,#Div4,#Div5,#Div6,#Div7{ 
+    width: 100%;
+    height: 100%;
+}
+
+#maparea1 {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#maparea2 {
+    width: 100%;
+    height: 100%;
+}
+#maparea3 {
+    width: 100%;
+    height: 100%;
+}
+#maparea4 {
+    width: 100%;
+    height: 100%;
+}
+#maparea5 {
+    width: 100%;
+    height: 100%;
+}
+#maparea6 {
+    width: 100%;
+    height: 100%;
+}
+#maparea7 {
+    width: 100%;
+    height: 100%;
+}
+#Div2,#Div3,#Div4,#Div5,#Div6,#Div7{
+    display: none;
+}
+
+
+/* A simple responsive design of the same i.e., Mobile styles */
+@media (max-width:480px){
+    #bodycontainer{
+        height: 100%;
+        width: 100%;
+    }
+    #maparea{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:360px){
+    #bodycontainer {
+        height: 100%;
+        width: 100%;
+    }
+    #maparea{
+        width: 100%;
+        height: 100%;
+    }
+}

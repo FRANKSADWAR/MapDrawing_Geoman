@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <title> Annular sectors JS  </title>
+    <style type="text/css">
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #maps {
+            width: 600px;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id="circlesCanvas" width="500" height="500"></canvas>
+</body>
+<script type="text/javascript">
+    
+
+    var canvasTwo = document.getElementById("circlesCanvas");
+    var ctx = canvasTwo.getContext('2d');
+    var endAngle = 0.0;
+    for (var x = 50; x < 500; x +=100){
+        ctx.beginPath();
+        ctx.moveTo(x,200);
+        endAngle += (2 * Math.PI) / 5;
+        ctx.arc(x,200, 50, 0, endAngle, false);
+        ctx.fill();
+    }
+    endAngle = 0.0;
+    for (x = 50; x < 500; x += 100){
+        ctx.beginPath();
+        ctx.moveTo(x, 400);
+        endAngle += ( 2 * Math.PI) / 5;
+        ctx.arc(x, 400, 50, 0, endAngle, true);
+        ctx.fill();
+    }
+
+</script>
+
+</html>
